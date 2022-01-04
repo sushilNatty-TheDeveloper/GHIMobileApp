@@ -5,6 +5,7 @@ import LoginScreen from './Screens/Login';
 import TripView from './Screens/TripView.js';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import GHIAppNavigator from './navigator/GHIAppNavigator';
  
 
 //Register Fonts
@@ -23,8 +24,9 @@ export default function App() {
      return (<AppLoading startAsync={fetchFonts}  onFinish={()=>SetFont(true)}  onError={(err)=>console.log(err)}/>);
    }
   return (
+
     <View style={styles.container}>
-      <LoginScreen/>
+     <GHIAppNavigator/>
       
     </View>
   );
